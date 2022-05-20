@@ -1,0 +1,28 @@
+Step 1: Install Java 11
+sudo apt-get update
+
+. Now you can install Java by running:
+sudo apt-get install default-jdk
+
+Step 2: Download the GPG Security Key
+wget –q –O – https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add –
+
+Step 3: Add the Jenkins Repository to Your System
+sudo sh –c ‘echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list’
+
+Step 4: Install Jenkins
+sudo apt-get update
+sudo apt-get install jenkins
+
+Step 5: Start and Enable the Jenkins Service
+sudo systemctl start jenkins
+sudo systemctl enable jenkins
+
+Step 6: Configure Jenkins
+http://localhost:8080
+
+Unlock Jenkins
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+Install Plugins
+Install suggested plugins
