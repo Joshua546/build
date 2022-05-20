@@ -1,0 +1,375 @@
+login as: shuhari
+shuhari@192.168.80.136's password:
+Linux debian 4.19.0-5-amd64 #1 SMP Debian 4.19.37-5 (2019-06-19) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Thu May 19 07:04:28 2022
+shuhari@debian:~$
+shuhari@debian:~$
+shuhari@debian:~$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/shuhari/.ssh/id_rsa):
+Created directory '/home/shuhari/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/shuhari/.ssh/id_rsa.
+Your public key has been saved in /home/shuhari/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:k+qP9L7oxqkl9XC4XJUBYIYTeH99I/aRIKpzZqeo9Ho shuhari@debian
+The key's randomart image is:
++---[RSA 2048]----+
+|   ..o+....      |
+|  . +o  . .o     |
+|   . o . oo. .   |
+|      o..o+ =    |
+|     .+.S. + o   |
+|    oo+B..  .    |
+|  . .B*+.        |
+| . .E==+         |
+|  o+o+=o=.       |
++----[SHA256]-----+
+shuhari@debian:~$ ls
+gitdir  jenkins.io.key
+shuhari@debian:~$ cat /home/shuhari/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCoZESNyGZAxwLNs37hT9mzvPqmln9EgkQiJrMMs129                                                                                        7hX+MpIvQrLjC9Cdeztc4fyJaV1flsBpVCouRuv3xEOQ6OG5uGXsIw2irnk7K1qw4HPMk2+bWieYMS5P                                                                                        lmRW1WOJZyKT1O4UBsOBnsBfH8IY9sJxtDGE8JcMCHvhncGcd3NhR5p/jp6K/mkMvW7ATpGP3+Z+A5rs                                                                                        YzrAjr+5YKb9WRPs5OKWRbk0s/+d9mTcRjzCZu5MLEhAKrNPTPBIFJrQbL1KQad/SIeLK4/95HEPSy3R                                                                                        lWrA5ghlybsYno7tOWy/B2yFm8jltbpv7a2mvsELcLrCWoeKbYqxGXm3Kelz shuhari@debian
+shuhari@debian:~$ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCoZESNyGZAxwLNs37hT9mzvP                                                                                        qmln9EgkQiJrMMs1297hX+MpIvQrLjC9Cdeztc4fyJaV1flsBpVCouRuv3xEOQ6OG5uGXsIw2irnk7K1                                                                                        qw4HPMk2+bWieYMS5PlmRW1WOJZyKT1O4UBsOBnsBfH8IY9sJxtDGE8JcMCHvhncGcd3NhR5p/jp6K/m                                                                                        kMvW7ATpGP3+Z+A5rsYzrAjr+5YKb9WRPs5OKWRbk0s/+d9mTcRjzCZu5MLEhAKrNPTPBIFJrQbL1KQa                                                                                        d/SIeLK4/95HEPSy3RlWrA5ghlybsYno7tOWy/B2yFm8jltbpv7a2mvsELcLrCWoeKbYqxGXm3Kelz s
+-bash: ssh-rsa: command not found
+shuhari@debian:~$
+shuhari@debian:~$ ls /home/shuhari/.ssh/
+id_rsa  id_rsa.pub
+shuhari@debian:~$ cd
+shuhari@debian:~$ ls
+gitdir  jenkins.io.key
+shuhari@debian:~$ git clone "git@github.com:Joshua546/josh.git"
+Cloning into 'josh'...
+The authenticity of host 'github.com (13.234.210.38)' can't be established.
+ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,13.234.210.38' (ECDSA) to the list of kno                                                                                        wn hosts.
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+shuhari@debian:~$ ls
+gitdir  jenkins.io.key  josh
+shuhari@debian:~$ ls josh/
+README.md
+shuhari@debian:~$ touch josh.txt
+shuhari@debian:~$ ls
+gitdir  jenkins.io.key  josh  josh.txt
+shuhari@debian:~$ cd josh
+shuhari@debian:~/josh$ touch joshua.txt
+shuhari@debian:~/josh$ ls
+joshua.txt  README.md
+shuhari@debian:~/josh$ git add joshua.txt
+shuhari@debian:~/josh$ git commit -m "Josh is Bosshh"
+[master 81d5b5d] Josh is Bosshh
+ Committer: ShuHaRi <shuhari@debian.shuharilabs.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 joshua.txt
+shuhari@debian:~/josh$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 289 bytes | 144.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:Joshua546/josh.git
+   727f364..81d5b5d  master -> master
+shuhari@debian:~/josh$ ls
+joshua.txt  README.md
+shuhari@debian:~/josh$ git pull
+Warning: Permanently added the ECDSA host key for IP address '13.234.176.102' to t                                                                                      he list of known hosts.
+lsremote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From github.com:Joshua546/josh
+   81d5b5d..9b095b5  master     -> origin/master
+Updating 81d5b5d..9b095b5
+Fast-forward
+ praful | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 praful
+shuhari@debian:~/josh$ ls
+joshua.txt  praful  README.md
+shuhari@debian:~/josh$ cd
+shuhari@debian:~$
+shuhari@debian:~$
+shuhari@debian:~$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/shuhari/.ssh/id_rsa): howl.txt
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Passphrases do not match.  Try again.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in howl.txt.
+Your public key has been saved in howl.txt.pub.
+The key fingerprint is:
+SHA256:0rURhixo/E2A7zN8UnlCEOhaRNFLHSOab2YKfdTWqx0 shuhari@debian
+The key's randomart image is:
++---[RSA 2048]----+
+|   oo*=*ooo      |
+|    Bo+o*+ .     |
+|   +o+.*o.+      |
+|   .oo+o=..+     |
+|  .o.oB.SoE      |
+|  .. **..o .     |
+|    .  =. .      |
+|                 |
+|                 |
++----[SHA256]-----+
+shuhari@debian:~$
+shuhari@debian:~$
+shuhari@debian:~$
+shuhari@debian:~$ ls
+gitdir  howl.txt  howl.txt.pub  jenkins.io.key  josh  josh.txt
+shuhari@debian:~$ cat howl.txt
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABFwAAAAdzc2gtcn
+NhAAAAAwEAAQAAAQEAr2pX9i33bMAOYQsXYttROwCSaP3g5XDTrEMvSGBqwHVlrrqjmq28
+u6dqfD+cbggL4nnI+GN0uYS0TLJTNdThtzSDG90qgp4VWZcfK3jEjxUN4ufY8obhzVuCe/
+apkK8ornrXbudqxn94MLkTlcCoPMt+XSPHWPyjtdh33FIbqWf8qr9Ijjdsxnq9ZBiz+i4g
+1AY29qBX+1jx8kMCEoZkNa/9aU7mas4nhxKP0CoLlmQXIjcnkQUDDmjaWczyyexw1KLrOX
+zAMhGw5T47U60c/TSp0oEJ9XgXDfJz9o1GmOvKisH5Sq3KAc7Vs1saNoTKhaHe7Q4onikX
++eZJLWDeFwAAA8je4Lkn3uC5JwAAAAdzc2gtcnNhAAABAQCvalf2LfdswA5hCxdi21E7AJ
+Jo/eDlcNOsQy9IYGrAdWWuuqOarby7p2p8P5xuCAviecj4Y3S5hLRMslM11OG3NIMb3SqC
+nhVZlx8reMSPFQ3i59jyhuHNW4J79qmQryiuetdu52rGf3gwuROVwKg8y35dI8dY/KO12H
+fcUhupZ/yqv0iON2zGer1kGLP6LiDUBjb2oFf7WPHyQwIShmQ1r/1pTuZqzieHEo/QKguW
+ZBciNyeRBQMOaNpZzPLJ7HDUous5fMAyEbDlPjtTrRz9NKnSgQn1eBcN8nP2jUaY68qKwf
+lKrcoBztWzWxo2hMqFod7tDiieKRf55kktYN4XAAAAAwEAAQAAAQEAmvi9i11iyS4Hxg5R
+c+HEqva/YohgpvN93iNg43Vi+nL9CVgUb/Pr2HF4rxpXrhHnxgbH2UGsfrXRwCyPPPC9FO
+kMp5JGGy1kOUk8nWBNbwcvxHYGAYXOeWnOJoxtk8hbjYIzT+SdPY6h9ZGczuFtAIDbO5f/
+ZwuT6nS6t+fGTmt8DlNdn1uOZC9iSuyQFiM9W5Ihh7IqUS0bjd6EFzf6Mu7BW4Ukj7w10A
+ouKQczOzdDTbOD4JW3k17pWRxjjQgWniz/8QBDAlXuiTV5nLpra6PGCy+09PwM1diBZYKp
+FnweXVVecdBd/tf8e+tIT6zSzkv+GH3W0+PqdyXq3CltkQAAAIB0ExW7FhkVFrkKeKi7wf
+doNzXABbDsEsUAoVmpa/FBNEdtE1eeycRSaUT6Ye6kEDnNTbyceSwkzs0tb/ppGoVNc0gm
+40vCbGHbXTLwOt/9GX6Fvf3zuIW0oRveHkQBAxxJmQHVdHlc+dVTmzxAn0lUiPQcxuOnQv
+GXtT7n/aQJhwAAAIEA4GfEBfhesOMdVg+ryVJTwlzcSobRNadsXux6LOTw8ga6pd+Wzl/+
+9zc30U0AvwwTu3NtgBr7azpM1CJDybCf8CsJ2Qd3Tci1GseBSLsu5tjpz+P1AYf3roKboI
+tyu7EmwaEsjuVLMlBmjasAieC+ECnXPr8NhIMNnVUnZbG9Hr8AAACBAMgc1d0EGsZDGZoz
+vg9PqRSXjtEyWyvqohvVICuvjH/fbd7cZzqXoWW2r2Y/5UOrP1ZnVlJFkQJppGbseSf++r
+KbQ+CSrtxcdKGLi7lU/7CYQQc0I1KPUlHM894LC+eh2ypAvudI4pCNJZKnkp92D7mEmAvo
+P9PB7CwFMKLJju6pAAAADnNodWhhcmlAZGViaWFuAQIDBA==
+-----END OPENSSH PRIVATE KEY-----
+shuhari@debian:~$
+shuhari@debian:~$ ls
+gitdir  howl.txt  howl.txt.pub  jenkins.io.key  josh  josh.txt
+shuhari@debian:~$ cat howl.txt.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCvalf2LfdswA5hCxdi21E7AJJo/eDlcNOsQy9IYGrAdWWuuqOarby7p2p8P5xuCAviecj4Y3S5hLRMslM11OG3NIMb3SqCnhVZlx8reMSPFQ3i59jyhuHNW4J79qmQryiuetdu52rGf3gwuROVwKg8y35dI8dY/KO12HfcUhupZ/yqv0iON2zGer1kGLP6LiDUBjb2oFf7WPHyQwIShmQ1r/1pTuZqzieHEo/QKguWZBciNyeRBQMOaNpZzPLJ7HDUous5fMAyEbDlPjtTrRz9NKnSgQn1eBcN8nP2jUaY68qKwflKrcoBztWzWxo2hMqFod7tDiieKRf55kktYN4X shuhari@debian
+shuhari@debian:~$ ^C
+shuhari@debian:~$ ^C
+shuhari@debian:~$
+shuhari@debian:~$ git clone "git@github.com:Joshua546/wolf.git "
+Cloning into 'wolf'...
+fatal: remote error:
+  Joshua546/wolf.git  is not a valid repository name
+  Visit https://support.github.com/ for help
+shuhari@debian:~$ ls
+gitdir  howl.txt  howl.txt.pub  jenkins.io.key  josh  josh.txt
+shuhari@debian:~$ sudo mkdir jb
+[sudo] password for shuhari:
+shuhari@debian:~$
+shuhari@debian:~$ sudo -s
+root@debian:/home/shuhari# cd jb
+root@debian:/home/shuhari/jb# cd\
+>
+root@debian:~# ls
+root@debian:~# ls
+root@debian:~# ex
+
+[1]+  Stopped                 ex
+root@debian:~# exit
+exit
+There are stopped jobs.
+root@debian:~# visual
+bash: visual: command not found
+root@debian:~# su shuhari
+shuhari@debian:/root$ cd
+shuhari@debian:~$ ls
+gitdir  howl.txt  howl.txt.pub  jb  jenkins.io.key  josh  josh.txt
+shuhari@debian:~$ git clone git@github.com:Joshua546/wolf.git
+Cloning into 'wolf'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+shuhari@debian:~$ ls
+gitdir  howl.txt  howl.txt.pub  jb  jenkins.io.key  josh  josh.txt  wolf
+shuhari@debian:~$ cd wolf
+shuhari@debian:~/wolf$ git init
+Reinitialized existing Git repository in /home/shuhari/wolf/.git/
+shuhari@debian:~/wolf$ nano jj.txt
+shuhari@debian:~/wolf$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        jj.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+shuhari@debian:~/wolf$ git add jj.txt
+shuhari@debian:~/wolf$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   jj.txt
+
+shuhari@debian:~/wolf$ git push
+Everything up-to-date
+shuhari@debian:~/wolf$ git commit --help
+warning: failed to exec 'man': No such file or directory
+fatal: no man viewer handled the request
+shuhari@debian:~/wolf$ git --help
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout    Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+shuhari@debian:~/wolf$ git commit
+Aborting commit due to empty commit message.
+shuhari@debian:~/wolf$ man git\
+> ^C
+shuhari@debian:~/wolf$ man git
+bash: man: command not found
+shuhari@debian:~/wolf$ sudo apt-get install man
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Note, selecting 'man-db' instead of 'man'
+The following additional packages will be installed:
+  groff-base libpipeline1 libuchardet0
+Suggested packages:
+  groff apparmor www-browser
+The following NEW packages will be installed:
+  groff-base libpipeline1 libuchardet0 man-db
+0 upgraded, 4 newly installed, 0 to remove and 1 not upgraded.
+Need to get 2,286 kB of archives.
+After this operation, 6,696 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y\
+Get:1 http://deb.debian.org/debian buster/main amd64 libuchardet0 amd64 0.0.6-3 [64.9 kB]
+Get:2 http://deb.debian.org/debian buster/main amd64 groff-base amd64 1.22.4-3+deb10u1 [916 kB]
+Get:3 http://deb.debian.org/debian buster/main amd64 libpipeline1 amd64 1.5.1-2 [31.2 kB]
+Get:4 http://deb.debian.org/debian buster/main amd64 man-db amd64 2.8.5-2 [1,274 kB]
+Fetched 2,286 kB in 2s (1,328 kB/s)
+Preconfiguring packages ...
+Selecting previously unselected package libuchardet0:amd64.
+(Reading database ... 21896 files and directories currently installed.)
+Preparing to unpack .../libuchardet0_0.0.6-3_amd64.deb ...
+Unpacking libuchardet0:amd64 (0.0.6-3) ...
+Selecting previously unselected package groff-base.
+Preparing to unpack .../groff-base_1.22.4-3+deb10u1_amd64.deb ...
+Unpacking groff-base (1.22.4-3+deb10u1) ...
+Selecting previously unselected package libpipeline1:amd64.
+Preparing to unpack .../libpipeline1_1.5.1-2_amd64.deb ...
+Unpacking libpipeline1:amd64 (1.5.1-2) ...
+Selecting previously unselected package man-db.
+Preparing to unpack .../man-db_2.8.5-2_amd64.deb ...
+Unpacking man-db (2.8.5-2) ...
+Setting up libpipeline1:amd64 (1.5.1-2) ...
+Setting up libuchardet0:amd64 (0.0.6-3) ...
+Setting up groff-base (1.22.4-3+deb10u1) ...
+Setting up man-db (2.8.5-2) ...
+Building database of manual pages ...
+Created symlink /etc/systemd/system/timers.target.wants/man-db.timer → /lib/systemd/system/man-db.timer.
+man-db.service is a disabled or a static unit, not starting it.
+Processing triggers for libc-bin (2.28-10+deb10u1) ...
+shuhari@debian:~/wolf$ man git
+shuhari@debian:~/wolf$ man git
+shuhari@debian:~/wolf$ git-commit-tree
+bash: git-commit-tree: command not found
+shuhari@debian:~/wolf$ man git-commit
+shuhari@debian:~/wolf$ git commit -m "crazy dj"
+[master dd290ff] crazy dj
+ Committer: ShuHaRi <shuhari@debian.shuharilabs.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 jj.txt
+shuhari@debian:~/wolf$ git config --global user.email "joshua546@gmail.com"
+shuhari@debian:~/wolf$ git config --global user.name "joshua546"
+shuhari@debian:~/wolf$ git commit -m "crazy dj"
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+shuhari@debian:~/wolf$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 283 bytes | 94.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:Joshua546/wolf.git
+   e46447b..dd290ff  master -> master
+shuhari@debian:~/wolf$
